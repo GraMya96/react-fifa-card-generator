@@ -1,0 +1,35 @@
+@import '../../global-sass/mixins.scss';
+
+.hero_section {
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, 0.25);
+    padding-top: 3.5vw;
+    // clip-path: polygon(100% 0, 100% 92%, 0 100%, 0 0 );
+
+    @include responsive_min(xxl) {
+        padding-top: 9vw;
+    }
+
+    & h1 {
+        color: #fff;
+        font-size: 5.2rem;
+        text-shadow: 4px 4px 8px #000;
+
+        @include responsive_min(xxl) {
+            font-size: 6.35rem;
+        }
+    }
+
+    & .buttons {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        & > a,
+        & > button {
+            text-transform: uppercase;
+        }
+    }
+}

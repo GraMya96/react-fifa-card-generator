@@ -1,0 +1,20 @@
+.social-banner {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+
+    & > .social {
+        padding: 10px 20px;
+        background: #000;
+        border-bottom: none;
+        cursor: pointer;
+        color: #fff;
+
+        &:not(:last-of-type) {
+            border-right: 1.5px solid #fff;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import '../../global-sass/mixins.scss';
+
+.page-create-card {
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 50px;
+
+    @include responsive(sm) {
+        padding-bottom: 30px;
+    }
+
+    & > a.button {
+        position: absolute;
+        right: 6%;
+        top: 5vh;
+        animation: fadeIn 1s ease;
+        box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+        z-index: 10;
+
+        @include responsive(lg) {
+            position: initial;
+            margin-top: 30px;
+        }
+    }
+
+    & h1 {
+        font-size: 3.2rem;
+
+        @include responsive_min(xxl) {
+            font-size: 4.05rem;
+        }
+    }
+
+    & span.successful-message {
+        padding: 10px;
+        background: green;
+        color: #fff;
+        font-size: 1rem;
+        border: 1.5px solid black;
+        border-radius: 10px;
+    }
+}

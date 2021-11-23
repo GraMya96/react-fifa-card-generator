@@ -1,0 +1,164 @@
+/*
+  *** fut-player-card styles ***
+*/
+
+@import '../../global-sass/animations.scss';
+@import '../../global-sass/mixins.scss';
+@import '../../global-sass/variables.scss';
+
+// fut-player-card
+.card {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    animation: fadeDown 1s linear;
+    position: relative;
+    width:300px;
+    height:485px;
+    background-image: url(../../img/card_bg.png);
+    background-position: center center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    padding:3.8rem 0;
+    z-index: 2;
+    transition: 200ms ease-in;
+
+    @include responsive_min(xxl) {
+        width: 330px;
+        height: 530px;
+    }
+
+    .player-card-top {
+        position: relative;
+        display: flex;
+        color: $gold;
+        padding: 0 1.5rem;
+
+        .player-master-info {
+            position: absolute;
+            line-height: 2.2rem;
+            font-weight: 300;
+            padding: 1.5rem 0;
+            text-transform: uppercase;
+
+            .player-rating {
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            .player-position  {
+                font-size: 1.3rem;
+                margin-top: -.25rem;
+                text-transform: uppercase;
+            }
+        }
+        .player-picture {
+            width:200px;
+            height:200px;
+            margin: 0 auto;
+            overflow: hidden;
+            animation: fadeIn 1.1s linear;
+
+            img {
+                width:100%;
+                height:100%;
+                object-fit: contain;
+                position: relative;
+                right: -1.5rem;
+                bottom: 0;
+            }
+        }
+    }
+    .player-card-bottom {
+        position: relative;
+
+        .player-info {
+            display: block;
+            padding:0.3rem 0;
+            color:$gold;
+            width:90%;
+            margin:0 auto;
+            height: auto;
+            position: relative;
+            z-index: 2;
+
+            .player-name {
+                width:100%;
+                display: block;
+                text-align: center;
+                font-size:1.6rem;
+                text-transform: uppercase;
+                padding-bottom: 0.3rem;
+                overflow: hidden;
+
+                @include responsive_min(xxl) {
+                    margin-top: 1.4rem;
+                }
+
+                span {
+                    display: block;
+                    text-shadow:2px 2px #111;
+                }
+            }
+            .player-features {
+                margin: 0 1.8rem;
+                display: grid;
+                padding-top: .5rem;
+                grid-template-rows: 3;
+                grid-template-columns: repeat(2, 1fr);
+                border-top: 2px solid rgba($gold, 0.1);
+                align-items: space-between;
+                position: relative;
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    height: 85%;
+                    width: 2px;
+                    background: rgba($gold, 0.1);
+                    content: '';
+                    position: absolute;
+                    top: .8rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                div.skills-container {
+                    display: flex;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    width: 60%;
+
+                    &.start {
+                        justify-self: start;
+                    }
+                    &.end {
+                        justify-self: end;
+                    }
+
+                    &:nth-of-type(2) { //Shot
+                        grid-column: 1/2;
+                        grid-row: 2/3;
+                    }
+                    &:nth-of-type(3) { //Passing
+                        grid-column: 1/2;
+                        grid-row: 3/4;
+                    }
+
+                    .player-feature-value {
+                        font-weight: 700;
+                        margin-right: .35rem;
+                    }
+
+                    .player-feature-title {
+                        font-weight: 300;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .player-features-col:last-child {
+                    border: 0;
+                }
+            }
+        }
+    }
+}

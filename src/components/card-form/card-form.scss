@@ -1,0 +1,75 @@
+@import '../../global-sass/animations.scss';
+@import '../../global-sass/mixins.scss';
+@import '../../global-sass/variables.scss';
+
+.card-form {
+    border: 1.5px solid rgba(0, 0, 0, .4);
+    padding: 30px;
+    animation: fadeIn 1.25s ease-in-out;
+    border-radius: 10px;
+    background: linear-gradient(to right bottom, #30394A, #0c0e13);
+    box-shadow: 0px 0px 3px #000,
+        inset 0px 0px 5px rgba(0, 0, 0,  .3);
+
+    & .react-colorful {
+        width: 100%;
+        height: 150px;
+        cursor: pointer;
+    }
+
+    & label {
+        color: #fff;
+        font-weight: 700;
+    }
+
+    & input {
+        border-radius: 20px;
+        padding: 3px 5px 3px 15px;
+        border: 2px solid $gold !important;
+        box-shadow: inset 0px 0px 5px #fdd42ea4;
+
+        &#overall-value {
+            width: 18% !important;
+        }
+
+        &:focus {
+            outline: none;
+            outline: 1.5px solid $gold;
+            box-shadow: inset 0px 0px 5px $gold;
+        }
+    }
+
+    & .card-values {
+        margin-top: 50px;
+
+        & label {
+            margin-right: auto;
+        }
+
+        & input {
+            max-width: none;
+            width: 40%;
+        }
+    }
+
+    & .add-color {
+        margin-top: 40px;
+
+        button {
+            font-size: .95rem;
+            padding: 3px 15px;
+
+            @include responsive(md) {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    & button {
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .5);
+
+        @include responsive_min(xxl) {
+            font-size: 1.2rem;
+        }
+    }
+}

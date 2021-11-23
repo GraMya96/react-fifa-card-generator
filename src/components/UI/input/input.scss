@@ -1,0 +1,53 @@
+@import '../../../global-sass/mixins.scss';
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.error-message {
+    color: red;
+    font-size: .75rem;
+}
+
+.withLabelDiv {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:not(:last-of-type) {
+        margin-bottom: 25px;
+
+        @include responsive(sm) {
+            margin-bottom: 40px;
+        }
+    }
+
+    & > label {
+        margin-right: auto;
+    }
+
+    & > .select {
+        cursor: pointer;
+    }
+    & > .input {
+        width: 50%;
+
+        &.invalid {
+            border: 2px solid rgba(255, 0, 0, 0.9) !important;
+        }
+    }
+    & .error-message {
+        position: absolute;
+        top: 23px;
+        left: 0;
+        text-align: left;
+    }
+}
