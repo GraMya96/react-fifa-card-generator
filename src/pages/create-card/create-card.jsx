@@ -33,7 +33,7 @@ const initialFormState = [
     { field: 'shot', type: 'number', value: '', isValid: true },
     { field: 'passing', type: 'number', value: '', isValid: true },
     { field: 'dribbling', type: 'number', value: '', isValid: true },
-    { field: 'defence', type: 'number', value: '', isValid: true },
+    { field: 'defence', type: 'number', value: '', isValid: false },
     { field: 'physique', type: 'number', value: '', isValid: true }
 ];
 
