@@ -41,8 +41,10 @@ const Input = ({ key, elementType, hasLabel, labelText, options, isValid, errorM
                         </div>
 
                     :  (
-                        inputElement,
-                        !isValid && errorMessage ? <p className="error-message">{ errorMessage }</p> : null
+                        <>
+                            { inputElement }
+                            { !isValid && errorMessage ? <p className="error-message">{ errorMessage }</p> : null }
+                        </>
                     )
                 }
             </>

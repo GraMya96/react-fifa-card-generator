@@ -9,7 +9,8 @@ import AllCards from '../pages/all-cards/all-cards';
 const App = () => {
 
 	return (
-		<BrowserRouter>
+		<BrowserRouter
+			basename="/">
 			<div className="App">
 
 				{/* Pages */}
