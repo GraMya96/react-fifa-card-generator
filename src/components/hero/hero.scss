@@ -8,6 +8,13 @@
     padding-top: 3.5vw;
     // clip-path: polygon(100% 0, 100% 92%, 0 100%, 0 0 );
 
+    & > .container {
+
+        @include responsive(sm) {
+            max-width: 600px;
+        }
+    }
+
     @include responsive_min(xxl) {
         padding-top: 9vw;
     }
@@ -19,6 +26,9 @@
 
         @include responsive_min(xxl) {
             font-size: 6.35rem;
+        }
+        @include responsive(sm) {
+            font-size: 4.8rem;
         }
     }
 

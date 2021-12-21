@@ -15,7 +15,7 @@ const Button = ( { children, elementType, color, background, clickHandler, ...ot
         htmlElement = (
             <Link
                 style = { buttonStyle }
-                className = { `button ${ otherProps.otherClass ? otherProps.otherClass : null }` }
+                className = { `button ${ otherProps.otherClass ? otherProps.otherClass : '' }` }
                 to = { clickHandler }>
                 { children }
             </Link>
@@ -25,7 +25,7 @@ const Button = ( { children, elementType, color, background, clickHandler, ...ot
         htmlElement = (
             <button
                 style = { buttonStyle }
-                className = { `button ${ otherProps.otherClass ? otherProps.otherClass : null }` }
+                className = { `button ${ otherProps.otherClass ? otherProps.otherClass : '' }` }
                 onClick = { clickHandler }>
                 { children }
             </button>

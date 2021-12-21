@@ -29,6 +29,9 @@
         @include responsive_min(xxl) {
             font-size: 4.05rem;
         }
+        @include responsive_min(sm) {
+            font-size: 2.7rem;
+        }
     }
 
     & span.successful-message {

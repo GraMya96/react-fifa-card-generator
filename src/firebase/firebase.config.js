@@ -17,7 +17,6 @@ const config = {
     storageBucket: "react-fifa-cards.appspot.com",
     messagingSenderId: "538402527588",
     appId: "1:538402527588:web:319f4493ecccaa9a81c271"
-
 };
 
 /* Firebase Init */

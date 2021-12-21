@@ -22,7 +22,7 @@ const Hero = props => {
                     <div className="col-12 col-md-6 col-xl-7 d-flex align-items-center">
                         <h1>Football Cards Generator</h1>
                     </div>
-                    <div className="col-12 col-md-4 offset-md-2 offset-xl-1 d-flex flex-column justify-content-center align-items-end">
+                    <div className="col-12 col-md-4 offset-md-2 offset-xl-1 d-flex flex-column justify-content-center align-items-center align-items-md-end">
                         <div className="buttons">
                             <Button
                                 elementType = 'a'
