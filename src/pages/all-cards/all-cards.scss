@@ -7,6 +7,11 @@
     background-size: cover;
     padding-bottom: 50px;
 
+    @include responsive(sm) {
+        padding-bottom: 0;
+        overflow-x: hidden;
+    }
+
     & a.button {
         position: absolute;
         right: 6%;
